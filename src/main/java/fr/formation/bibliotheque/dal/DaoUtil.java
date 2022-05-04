@@ -28,11 +28,14 @@ public class DaoUtil {
 	}
 
 	public static void close() {
-		try {
-			conn.close();
-		} catch (Exception e) {
-			System.out.println("Probleme de fermeture de connexion : " + e.getMessage());
+		if (conn != null) {
+			try {
+				conn.close();
+			} catch (Exception e) {
+				System.out.println("Probleme de fermeture de connexion : " + e.getMessage());
+			}
+			conn = null;
 		}
-		conn = null;
+
 	}
 }

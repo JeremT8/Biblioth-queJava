@@ -91,9 +91,23 @@ public class Livre {
 
 	@Override
 	public String toString() {
-		return "Livre [id=" + id + ", titre=" + titre + ", auteur=" + auteur + ", isbn=" + isbn + ", nbPage=" + nbPages
-				+ ", dateAchat=" + dateAchat + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Titre du livre : ");
+		builder.append("\n" + titre);
+		builder.append("\nAuteur du livre :");
+		builder.append("\n" + auteur);
+		builder.append("\nNombre de pages du livres :");
+		builder.append("\n" + nbPages + " page(s)");
+		builder.append("\nDate d'achat :");
+		builder.append("\n" + dateAchat);
+		builder.append("\nISBN :");
+		builder.append("\n" + isbn);
+		builder.append("\n\n");
+		return builder.toString();
 	}
+
+
+	
 	
 	
 	
